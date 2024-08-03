@@ -75,6 +75,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const response = await elevenlabs.voices.getAll();
       const voices = response.voices;
       res.status(200).json({ voices });
+      console.log('Vozes Disponíveis:');
+    console.log(JSON.stringify(response, null, 2));
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error('Erro ao obter as vozes:', error.message);

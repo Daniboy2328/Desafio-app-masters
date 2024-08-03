@@ -1,0 +1,66 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+.voices-selection{
+    width: 50vw;
+    margin-left: 0;
+    display: flex;
+    justify-content: center
+
+}
+.generator-section{
+    width: 50vw;
+    margin-right: 0;
+    display: flex;
+    justify-content: center
+}
+
+.textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #777777;
+    cursor: not-allowed;
+}
+
+.audio-container {
+    margin-top: 20px;
+}
+
+.audio-container audio {
+    width: 100%;
+    max-width: 400px;
+}
