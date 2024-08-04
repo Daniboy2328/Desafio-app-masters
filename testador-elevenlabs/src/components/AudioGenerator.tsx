@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+import { IconButton } from '@mui/material';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
 
 interface AudioGeneratorProps {
   text: string;
@@ -81,9 +84,8 @@ const AudioGenerator: React.FC<AudioGeneratorProps> = ({
 
   return (
     <div className="generator-section">
-      <h1 className="title-right">Testador de vozes <br/> do Elevenlabs!</h1>
+      <h1 className="title-right">Testador de vozes <br /> do Elevenlabs!</h1>
       <div className="generator-card">
-      
         <h2 className="title-card">Gerar Áudio</h2>
         <textarea
           value={text}
@@ -108,12 +110,12 @@ const AudioGenerator: React.FC<AudioGeneratorProps> = ({
               </>
             )}
             <div className="buttons-container">
-              <button onClick={handlePrevVoice} disabled={currentIndex === 0}>
-                Anterior
-              </button>
-              <button onClick={handleNextVoice} disabled={currentIndex === voices.length - 1}>
-                Próxima Voz
-              </button>
+              <IconButton onClick={handlePrevVoice} disabled={currentIndex === 0}>
+                <SkipPreviousIcon />
+              </IconButton>
+              <IconButton onClick={handleNextVoice} disabled={currentIndex === voices.length - 1}>
+                <SkipNextIcon />
+              </IconButton>
             </div>
             <p>Total de vozes: {totalVoices}</p>
           </div>

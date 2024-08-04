@@ -34,9 +34,22 @@ export default function Home() {
 
     fetchVoices();
   }, []);
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowRight' && currentIndex < voices.length - 1) {
+        setCurrentIndex(currentIndex + 1);
+      } else if (event.key === 'ArrowLeft' && currentIndex > 0) {
+        setCurrentIndex(currentIndex - 1);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentIndex, voices]);
 
   return (
-    
     <div className="container">
       <AudioGenerator 
         text={text}

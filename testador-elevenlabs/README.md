@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🎤 Testador de Vozes do Elevenlabs
+Bem-vindo ao Testador de Vozes do Elevenlabs, onde você pode transformar texto em áudio e experimentar com várias vozes disponíveis na API do Elevenlabs. 🚀
 
-## Getting Started
+📝 Descrição do Projeto
+Este projeto é uma aplicação web que permite que você insira um texto e ouça como ele soa em diferentes vozes.
 
-First, run the development server:
+Principais Funcionalidades
+Visualize uma lista de vozes disponíveis.
+Gere áudio para seu texto utilizando a voz selecionada.
+Navegue entre as vozes com facilidade.
+Baixe o áudio gerado em formato MP3.
+🚀 Como Começar
+Aqui está o guia rápido para você começar:
 
-```bash
+Pré-requisitos
+Certifique-se de ter o Node.js versão 16 ou superior.
+NPM ou Yarn: Um desses gerenciadores de pacotes.
+Instalação
+Clone o repositório:
+
+git clone https://github.com/seuusuario/testador-elevenlabs.git
+cd testador-elevenlabs
+Instale as dependências:
+
+npm install
+# ou
+yarn install
+Configure sua chave de API no arquivo .env:
+
+ELEVENLABS_API_KEY=sua_chave_api_aqui
+Inicie o servidor de desenvolvimento:
+
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Abra o navegador em http://localhost:3000 e divirta-se testando as vozes!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🤖 Tecnologias Utilizadas
+Frontend: React e Next.js
+Backend: API integrada com Elevenlabs API
+🎨 Interface
+A interface é simples e "feia" porque o tempo foi curto. Gastei a Maior parte do tempo fazendo a integração com a API.
