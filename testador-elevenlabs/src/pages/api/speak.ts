@@ -10,7 +10,7 @@ const elevenlabs = new ElevenLabsClient({
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { text, voiceId, stability, similarityBoost, style, languageCode } = req.body;
+    const { text, voiceId, stability, similarityBoost, style } = req.body;
 
     if (!text || !voiceId) {
       return res.status(400).json({ error: 'Falta o texto ou o ID da voz' });

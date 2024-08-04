@@ -48,7 +48,7 @@ const AudioGenerator: React.FC<AudioGeneratorProps> = ({
 
     try {
       const currentVoice = voices[currentIndex];
-      const response = await fetch('/api/speak.ts', {
+      const response = await fetch('/api/speak', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text, voiceId: currentVoice.voice_id }),
