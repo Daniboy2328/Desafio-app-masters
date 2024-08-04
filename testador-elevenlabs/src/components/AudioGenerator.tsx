@@ -81,9 +81,10 @@ const AudioGenerator: React.FC<AudioGeneratorProps> = ({
 
   return (
     <div className="generator-section">
+      <h1 className="title-right">Testador de vozes <br/> do Elevenlabs!</h1>
       <div className="generator-card">
-      <h1>Testador de vozes da Elevenlabs!</h1>
-        <h2>Gerar Áudio</h2>
+      
+        <h2 className="title-card">Gerar Áudio</h2>
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}

@@ -12,7 +12,7 @@ interface Voice {
 const VoiceList: React.FC<VoiceListProps> = ({ voices }) => {
   return (
     <div className="voices-section">
-      <h1>Vozes Disponíveis</h1>
+      <h1 className="title-left">Vozes Disponíveis</h1>
       <div className="voices-grid">
         {voices.map((voice, index) => (
           <div key={voice.voice_id} className="voice-card">
