@@ -1,7 +1,7 @@
-🎤 Testador de Vozes do Elevenlabs
+# 🎤 Testador de Vozes do Elevenlabs
 Bem-vindo ao Testador de Vozes do Elevenlabs, onde você pode transformar texto em áudio e experimentar com várias vozes disponíveis na API do Elevenlabs. 🚀
 
-📝 Descrição do Projeto
+# 📝 Descrição do Projeto
 Este projeto é uma aplicação web que permite que você insira um texto e ouça como ele soa em diferentes vozes.
 
 Principais Funcionalidades
@@ -9,7 +9,7 @@ Visualize uma lista de vozes disponíveis.
 Gere áudio para seu texto utilizando a voz selecionada.
 Navegue entre as vozes com facilidade.
 Baixe o áudio gerado em formato MP3.
-🚀 Como Começar
+# 🚀 Como Começar
 Aqui está o guia rápido para você começar:
 
 Pré-requisitos
@@ -23,7 +23,7 @@ cd testador-elevenlabs
 Instale as dependências:
 
 npm install
-# ou
+ou
 yarn install
 Configure sua chave de API no arquivo .env:
 
@@ -31,7 +31,7 @@ ELEVENLABS_API_KEY=sua_chave_api_aqui
 Inicie o servidor de desenvolvimento:
 
 npm run dev
-# ou
+ou
 yarn dev
 Abra o navegador em http://localhost:3000 e divirta-se testando as vozes!
 
