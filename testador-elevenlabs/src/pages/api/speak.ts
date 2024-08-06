@@ -44,8 +44,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const audioStream = response.body;
 
-      const tempDir = join(process.cwd(), 'public', 'audio');
-      await fsPromises.mkdir(tempDir, { recursive: true });
+      const tempDir = '/tmp'; 
+      await fsPromises.mkdir(tempDir, { recursive: true }); 
       const filePath = join(tempDir, `${voiceId}.mp3`);
       const fileStream = createWriteStream(filePath);
 
@@ -57,7 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           fileStream.on('error', reject);
         });
 
-        res.status(200).json({ audioUrl: `/audio/${voiceId}.mp3` });
+        res.status(200).json({ audioUrl: `/api/download?path=${encodeURIComponent(filePath)}` });
       } else {
         throw new Error('Erro ao receber o stream de áudio');
       }
@@ -76,7 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const voices = response.voices;
       res.status(200).json({ voices });
       console.log('Vozes Disponíveis:');
-    console.log(JSON.stringify(response, null, 2));
+      console.log(JSON.stringify(response, null, 2));
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error('Erro ao obter as vozes:', error.message);
